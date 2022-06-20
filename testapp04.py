@@ -107,7 +107,7 @@ def main():
         st.header('初級')
         st.write("Classifying...")
         # teachable_machine_classification関数に画像を引き渡してクラスを推論する
-        prediction = teachable_machine_classification(image, '../20220606/keras_model.h5')        
+        prediction = teachable_machine_classification(image, 'keras_model.h5')        
         st.caption(f'推論結果：{prediction}番') # 戻り値の確認（デバッグ用）
 
         classNo = np.argmax(prediction)          # 一番確率の高いクラス番号を算出
@@ -128,7 +128,7 @@ def main():
         st.header('中級')
         st.write("Classifying...")
         # teachable_machine_classification関数に画像を引き渡してクラスを推論する
-        prediction = teachable_machine_classification(image, '../20220606/keras_model_V2.h5')        
+        prediction = teachable_machine_classification(image, 'keras_model_V2.h5')        
         st.caption(f'推論結果：{prediction}番') # 戻り値の確認（デバッグ用）
 
         classNo = np.argmax(prediction)          # 一番確率の高いクラス番号を算出
@@ -164,7 +164,7 @@ def main():
 
         st.write("Classifying...")
         # teachable_machine_classification関数に画像を引き渡してクラスを推論する
-        prediction2 = teachable_machine_classification(image2, '../20220606/keras_model_irasutoya.h5')
+        prediction2 = teachable_machine_classification(image2, 'keras_model_irasutoya.h5')
         st.caption(f'推論結果：{prediction2}番') # 戻り値の確認（デバッグ用）
 
         classNo2 = np.argmax(prediction2)          # 一番確率の高いクラス番号を算出
